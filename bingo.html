@@ -1,139 +1,230 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>Bingo Display</title>
-		<link rel="stylesheet" type="text/css" href="bingo.css" />
-		<style>
-			h1 {
-				text-align: center;
-				font-size: 3em;
-				margin-bottom: 20px;
-			}
-		</style>
-	</head>
-<body>
-	<h1>Sigma Delta Tau Bingo</h1>
-	<div id="spacer">&nbsp;</div>
-	<table id="table">
-	<tr>
-	<td class="letter">B</td>
-	<td class="cell">1</td>
-	<td class="cell">2</td>
-	<td class="cell">3</td>
-	<td class="cell">4</td>
-	<td class="cell">5</td>
-	<td class="cell">6</td>
-	<td class="cell">7</td>
-	<td class="cell">8</td>
-	<td class="cell">9</td>
-	<td class="cell">10</td>
-	<td class="cell">11</td>
-	<td class="cell">12</td>
-	<td class="cell">13</td>
-	<td class="cell">14</td>
-	<td class="cell">15</td>
-	</tr>
-	<tr>
-	<td class="letter">I</td>
-	<td class="cell">16</td>
-	<td class="cell">17</td>
-	<td class="cell">18</td>
-	<td class="cell">19</td>
-	<td class="cell">20</td>
-	<td class="cell">21</td>
-	<td class="cell">22</td>
-	<td class="cell">23</td>
-	<td class="cell">24</td>
-	<td class="cell">25</td>
-	<td class="cell">26</td>
-	<td class="cell">27</td>
-	<td class="cell">28</td>
-	<td class="cell">29</td>
-	<td class="cell">30</td>
-	</tr>
-	<tr>
-	<td class="letter">N</td>
-	<td class="cell">31</td>
-	<td class="cell">32</td>
-	<td class="cell">33</td>
-	<td class="cell">34</td>
-	<td class="cell">35</td>
-	<td class="cell">36</td>
-	<td class="cell">37</td>
-	<td class="cell">38</td>
-	<td class="cell">39</td>
-	<td class="cell">40</td>
-	<td class="cell">41</td>
-	<td class="cell">42</td>
-	<td class="cell">43</td>
-	<td class="cell">44</td>
-	<td class="cell">45</td>
-	</tr>
-	<tr>
-	<td class="letter">G</td>
-	<td class="cell">46</td>
-	<td class="cell">47</td>
-	<td class="cell">48</td>
-	<td class="cell">49</td>
-	<td class="cell">50</td>
-	<td class="cell">51</td>
-	<td class="cell">52</td>
-	<td class="cell">53</td>
-	<td class="cell">54</td>
-	<td class="cell">55</td>
-	<td class="cell">56</td>
-	<td class="cell">57</td>
-	<td class="cell">58</td>
-	<td class="cell">59</td>
-	<td class="cell">60</td>
-	</tr>
-	<tr>
-	<td class="letter">O</td>
-	<td class="cell">61</td>
-	<td class="cell">62</td>
-	<td class="cell">63</td>
-	<td class="cell">64</td>
-	<td class="cell">65</td>
-	<td class="cell">66</td>
-	<td class="cell">67</td>
-	<td class="cell">68</td>
-	<td class="cell">69</td>
-	<td class="cell">70</td>
-	<td class="cell">71</td>
-	<td class="cell">72</td>
-	<td class="cell">73</td>
-	<td class="cell">74</td>
-	<td class="cell">75</td>
-	</tr>
-</table>
+<head>
+    <title>Bingo Display</title>
+    <link rel="stylesheet" type="text/css" href="bingo.css" />
+    <style>
+        
+		#previous-calls {
+            margin-top: 20px;
+			text-align: center;
+        }
+        
 
+        #previous-calls h2 {
+            color: white;
+        }
+
+        #previous-calls div {
+            color: red;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+<h1>Sigma Delta Tau Bingo</h1>
+<div id="spacer">&nbsp;</div>
+<table id="table">
+	<tr>
+		<td class="letter">B</td>
+		<td class="cell">1</td>
+		<td class="cell">2</td>
+		<td class="cell">3</td>
+		<td class="cell">4</td>
+		<td class="cell">5</td>
+		<td class="cell">6</td>
+		<td class="cell">7</td>
+		<td class="cell">8</td>
+		<td class="cell">9</td>
+		<td class="cell">10</td>
+		<td class="cell">11</td>
+		<td class="cell">12</td>
+		<td class="cell">13</td>
+		<td class="cell">14</td>
+		<td class="cell">15</td>
+		</tr>
+		<tr>
+		<td class="letter">I</td>
+		<td class="cell">16</td>
+		<td class="cell">17</td>
+		<td class="cell">18</td>
+		<td class="cell">19</td>
+		<td class="cell">20</td>
+		<td class="cell">21</td>
+		<td class="cell">22</td>
+		<td class="cell">23</td>
+		<td class="cell">24</td>
+		<td class="cell">25</td>
+		<td class="cell">26</td>
+		<td class="cell">27</td>
+		<td class="cell">28</td>
+		<td class="cell">29</td>
+		<td class="cell">30</td>
+		</tr>
+		<tr>
+		<td class="letter">N</td>
+		<td class="cell">31</td>
+		<td class="cell">32</td>
+		<td class="cell">33</td>
+		<td class="cell">34</td>
+		<td class="cell">35</td>
+		<td class="cell">36</td>
+		<td class="cell">37</td>
+		<td class="cell">38</td>
+		<td class="cell">39</td>
+		<td class="cell">40</td>
+		<td class="cell">41</td>
+		<td class="cell">42</td>
+		<td class="cell">43</td>
+		<td class="cell">44</td>
+		<td class="cell">45</td>
+		</tr>
+		<tr>
+		<td class="letter">G</td>
+		<td class="cell">46</td>
+		<td class="cell">47</td>
+		<td class="cell">48</td>
+		<td class="cell">49</td>
+		<td class="cell">50</td>
+		<td class="cell">51</td>
+		<td class="cell">52</td>
+		<td class="cell">53</td>
+		<td class="cell">54</td>
+		<td class="cell">55</td>
+		<td class="cell">56</td>
+		<td class="cell">57</td>
+		<td class="cell">58</td>
+		<td class="cell">59</td>
+		<td class="cell">60</td>
+		</tr>
+		<tr>
+		<td class="letter">O</td>
+		<td class="cell">61</td>
+		<td class="cell">62</td>
+		<td class="cell">63</td>
+		<td class="cell">64</td>
+		<td class="cell">65</td>
+		<td class="cell">66</td>
+		<td class="cell">67</td>
+		<td class="cell">68</td>
+		<td class="cell">69</td>
+		<td class="cell">70</td>
+		<td class="cell">71</td>
+		<td class="cell">72</td>
+		<td class="cell">73</td>
+		<td class="cell">74</td>
+		<td class="cell">75</td>
+		</tr>
+</table>
 <input type="button" id="clear" value="Clear">
 
+<!-- Add this div at the bottom of your body -->
+<div id="previous-calls">
+    <h2>Last 3 Calls:</h2>
+    <div id="call1"></div>
+    <div id="call2"></div>
+    <div id="call3"></div>
+</div>
+
 <script type="text/javascript">
+    // Add this code at the beginning of your script
+    let lastThreeCalls = ["", "", ""];
 
-	document.querySelector("#clear")
-		.addEventListener("click", event => {
-			if (confirm("Clear Board. Are you sure?")) {
-			    document.querySelectorAll(".cell")
-			    	.forEach(element => element.classList.remove("lastcalled","called"));
-			}
-    	});
+    function getLetterCategory(number) {
+        if (number <= 15) {
+            return "B";
+        } else if (number <= 30) {
+            return "I";
+        } else if (number <= 45) {
+            return "N";
+        } else if (number <= 60) {
+            return "G";
+        } else {
+            return "O";
+        }
+    }
 
-	document.querySelectorAll(".cell")
-		.forEach(element => {
-			element.addEventListener("click", event => {
-				if (event.target.classList.contains("called")) {
-					event.target.classList.remove("called", "lastcalled");
-				} else {
-					document.querySelectorAll(".cell")
-						.forEach(element => element.classList.remove("lastcalled"));
-					event.target.classList.add("called", "lastcalled");
-				}
-			});
-		});
+    function updatePreviousCalls() {
+        document.querySelector("#call1").textContent = lastThreeCalls[0] ? getLetterCategory(lastThreeCalls[0]) + " " + lastThreeCalls[0] : "";
+        document.querySelector("#call2").textContent = lastThreeCalls[1] ? getLetterCategory(lastThreeCalls[1]) + " " + lastThreeCalls[1] : "";
+        document.querySelector("#call3").textContent = lastThreeCalls[2] ? getLetterCategory(lastThreeCalls[2]) + " " + lastThreeCalls[2] : "";
+    }
+	function clearPreviousCalls() {
+    lastThreeCalls = ["", "", ""];
+    updatePreviousCalls();
+	}	
 
+	function showB4Message() {
+    const helloMessage = document.createElement("div");
+    helloMessage.textContent = "B4.... and after";
+    helloMessage.style.position = "fixed";
+    helloMessage.style.bottom = "0";
+    helloMessage.style.left = "0";
+    helloMessage.style.padding = "10px";
+    helloMessage.style.backgroundColor = "black";
+    helloMessage.style.color = "white";
+	helloMessage.style.fontSize = "3em";
+    document.body.appendChild(helloMessage);
+
+    setTimeout(() => {
+        document.body.removeChild(helloMessage);
+    }, 3000);
+}
+
+function show69Message() {
+    const helloMessage = document.createElement("div");
+    helloMessage.textContent = "69.... nice";
+    helloMessage.style.position = "fixed";
+    helloMessage.style.bottom = "0";
+    helloMessage.style.left = "0";
+    helloMessage.style.padding = "10px";
+    helloMessage.style.backgroundColor = "black";
+    helloMessage.style.color = "white";
+	helloMessage.style.fontSize = "3em";
+    document.body.appendChild(helloMessage);
+
+    setTimeout(() => {
+        document.body.removeChild(helloMessage);
+    }, 3000);
+}
+
+
+    // Update this part of your script
+    document.querySelectorAll(".cell")
+        .forEach(element => {
+            element.addEventListener("click", event => {
+                if (event.target.classList.contains("called")) {
+                    event.target.classList.remove("called", "lastcalled");
+                } else {
+                    document.querySelectorAll(".cell")
+                        .forEach(element => element.classList.remove("lastcalled"));
+                    event.target.classList.add("called", "lastcalled");
+
+                    // Update lastThreeCalls and display
+                    lastThreeCalls.unshift(parseInt(event.target.textContent));
+                    lastThreeCalls = lastThreeCalls.slice(0, 3);
+                    updatePreviousCalls();
+
+					// Show "Hello" message when clicking on number 4
+					if (parseInt(event.target.textContent) === 4) {
+                    showB4Message();
+                }
+
+				if (parseInt(event.target.textContent) === 69) {
+                    show69Message();
+                }
+                }
+            });
+        });
+
+    document.querySelector("#clear")
+        .addEventListener("click", event => {
+            if (confirm("Clear Board. Are you sure?")) {
+                document.querySelectorAll(".cell")
+                    .forEach(element => element.classList.remove("lastcalled", "called"));
+					clearPreviousCalls();
+            }
+        });
 </script>
-
 </body>
 </html>
-
-
